@@ -1,10 +1,14 @@
 db_homes_config:
+  19300-base:
+    home: db1-base
+    version: 19.3.0.0
+    edition: EE
   18300-base:
     home: db1-base
     version: 18.3.0.0
     edition: EE
   12201-base:
-    home: db1-base
+    home: dbhome_1
     version: 12.2.0.1
     edition: EE
   12201-180717:
@@ -23,16 +27,9 @@ db_homes_config:
 
 
 db_homes_installed:
-     - home: 18300-base
-       apply_patches: False
-       state: present
      - home: 12201-base
        apply_patches: False
-       state: absent
-     - home: 12201-180717
-       apply_patches: True
-       state: absent
-
+       state: present
 
 oracle_sw_patches:
      - { filename: p28183653_122010_Linux-x86-64.zip, patchid: 28183653, version: 12.2.0.1,  patchversion: 12.2.0.1.180717, description: GI-RU-July-2018, creates: 28183653/28163133/files/suptools/orachk.zip }

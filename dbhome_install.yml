@@ -1,0 +1,7 @@
+ - name: Database Server Installation 
+   hosts: dbservers-122
+   become: yes
+   become_method: sudo
+   roles:
+      - oraswdb-install
+     # - oradb-create
